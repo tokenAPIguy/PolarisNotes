@@ -1,0 +1,31 @@
+﻿<Application x:Class="DailyTasksApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:DailyTasksApp"
+             xmlns:viewModel="clr-namespace:DailyTasksApp.MVVM.ViewModel"
+             xmlns:view="clr-namespace:DailyTasksApp.MVVM.View"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/TextboxTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            
+
+            <DataTemplate DataType="{x:Type viewModel:NoteViewModel}">
+                <view:NoteView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:ReminderViewModel}">
+                <view:ReminderView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:UrgentViewModel}">
+                <view:UrgentView/>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
