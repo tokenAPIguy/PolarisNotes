@@ -7,17 +7,19 @@
         xmlns:viewModel="clr-namespace:DailyTasksApp.MVVM.ViewModel"
         xmlns:view="clr-namespace:DailyTasksApp.MVVM.View" xmlns:avalon="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:avalon1="http://icsharpcode.net/sharpdevelop/avalonedit"
         mc:Ignorable="d"
-        Height="600" Width="920"
+        Height="458" Width="712"
         WindowStyle="None"
         ResizeMode="CanResizeWithGrip"
         Background="Transparent"
-        AllowsTransparency="True">
+        AllowsTransparency="True"
+        MinWidth="640"
+        MinHeight="528">
 
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
 
-
+   
 
 
     <Border Background = "#272537"
@@ -43,7 +45,9 @@
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top" Height="56" Width="40"/>
 
-            <StackPanel Orientation="Vertical" Margin="0,0,0,450" Grid.Row="1">
+            <StackPanel Orientation="Vertical" 
+                        Margin="0,0,0,450" 
+                        Grid.Row="1">
                 <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
             </StackPanel>
             <Grid Grid.Row="1"/>
@@ -114,7 +118,7 @@
 
             <Button Width="30"
                         Height="30" 
-                        Margin="847,22,43,23"
+                        Margin="0,18,43,0"
                         Click="CloseButton_Click"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Top">
@@ -143,7 +147,7 @@
 
             <Button Width="30"
                         Height="30" 
-                        Margin="799,22,91,23"
+                        Margin="0,18,90,0"
                         Click="MaximizeButton_Click"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Top">
@@ -171,7 +175,7 @@
 
             <Button Width="30"
                         Height="30" 
-                        Margin="752,22,138,23"
+                        Margin="0,18,139,0"
                         Click="MinimizeButton_Click"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Top">
